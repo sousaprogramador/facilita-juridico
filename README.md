@@ -6,7 +6,7 @@ Para você rodar o projeto em sua maquina local você necessita ter essas tecnol
 
 - Postman ou Insomnia: Você pode escolher qualquer um desses aplicativos para criar o usuário.
 
-- Banco de dados Mysql: Você precisa instalar o MySQL em sua máquina. Você pode seguir este ([guia](https://www.lifewire.com/how-to-install-mysql-on-macos-4586389)).
+- Docker e Docker-compose
 
 - NodeJS (versão LTS 18.17.1): É recomendável usar o NVM (Node Version Manager) para gerenciar as versões do NodeJS. Você pode instalar o NVM seguindo ([este guia](https://www.treinaweb.com.br/blog/instalando-e-gerenciando-varias-versoes-do-node-js-com-nvm)).
 
