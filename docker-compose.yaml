@@ -1,0 +1,38 @@
+services:
+  postgres:
+    build:
+      context: ./db
+    container_name: db-container
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_DB: roteirizador
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: roteirizador123
+
+  # nodeapp:
+  #   build:
+  #     context: ./back-end
+  #   command: npm run dev
+  #   ports:
+  #     - "9000:9000"
+  #   depends_on:
+  #     - postgres
+  #   environment:
+  #     DB_URI: http://localhost:5432
+  #     SPACEAPI: https://api.spacexdata.com/v5
+  #   volumes:
+  #     - ./back-end:/src/
+
+  # frontapp:
+  #   build:
+  #     context: ./front-end
+  #   command: npm run dev
+  #   ports:
+  #     - "3000:3000"
+  #   depends_on:
+  #     - nodeapp
+  #   environment:
+  #     VITE_API_URL: http://localhost:9000
+  #   volumes:
+  #     - ./front-end:/src/

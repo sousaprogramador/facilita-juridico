@@ -1,0 +1,24 @@
+/*
+ * CKEditor 5 (v40.2.0) content styles.
+ * Generated on Fri, 22 Dec 2023 08:39:34 GMT.
+ * For more information, check out https://ckeditor.com/docs/ckeditor5/latest/installation/advanced/content-styles.html
+ */
+
+.ck-content {
+  max-width: 700px;
+  width: 100%;
+  padding: 40px !important;
+  margin: 0 auto;
+}
+
+.ck.ck-editor__main {
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: rgb(242, 242, 242);
+  border: 1px solid rgb(196, 196, 196);
+  height: calc(100vh - 182px);
+  overflow: auto;
+}

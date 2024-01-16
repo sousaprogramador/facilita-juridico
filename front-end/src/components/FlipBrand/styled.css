@@ -1,0 +1,49 @@
+.main {
+  max-width: 400px;
+  background-color: transparent;
+}
+.container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.container.grid,
+.container.columns {
+  align-content: stretch;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.letter {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 6px;
+}
+.container.grid .letter {
+  flex-basis: 50%;
+}
+.container.columns .letter {
+  flex-basis: 25%;
+}
+.text-animation {
+  font-size: 32px;
+}
+.text-animation {
+  padding: 2px 5px;
+  display: none;
+}
+.container.final .text-animation,
+.container.final .gsap {
+  display: block;
+}
+
+.container.plain .letter {
+  background: transparent;
+  padding: 0;
+}
