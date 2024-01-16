@@ -45,7 +45,8 @@ docker compose up -d
 Na raiz do projeto front, crie um arquivo chamado .env e adicione o conteúdo do arquivo .env.sample.
 
 ```
-cd front-end && cd mv .env.sample .env yarn install && yarn dev
+cd front-end && cd mv .env.sample .env
+yarn install && yarn dev
 ```
 
 # 5. Executando o Back-end
