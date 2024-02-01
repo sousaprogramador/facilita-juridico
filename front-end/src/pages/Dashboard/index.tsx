@@ -1,4 +1,4 @@
-import {  useEffect } from 'react'
+import { useEffect } from 'react'
 import { TotalKM } from './TotalKM'
 import { PAGES } from '~/constants/pages'
 import { ClientCount } from './ClientCount'
@@ -73,9 +73,9 @@ export const DashboardPage = () => {
                 items={statistics?.data?.rows || []}
                 emptyContent={!statistics.data?.rows.length ? 'Nenhum dado foi encontrado.' : ''}
               >
-                {(item) => (
+                {(item: any) => (
                   <TableRow key={item?.distance}>
-                    {(columnKey) => <TableCell>{getKeyValue(item, columnKey)}</TableCell>}
+                    {(columnKey: any) => <TableCell>{getKeyValue(item, columnKey)}</TableCell>}
                   </TableRow>
                 )}
               </TableBody>

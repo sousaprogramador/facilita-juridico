@@ -15,13 +15,29 @@
     "useDefineForClassFields": true,
     "noFallthroughCasesInSwitch": true,
     "allowImportingTsExtensions": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "types": ["node", "jest", "@testing-library/jest-dom"],
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "types": [
+      "node",
+      "jest",
+      "@testing-library/jest-dom"
+    ],
     "baseUrl": ".",
     "paths": {
-      "~/*": ["src/*"]
+      "~/*": [
+        "src/*"
+      ]
     }
   },
-  "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": [
+    "src"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
 }

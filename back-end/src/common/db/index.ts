@@ -10,7 +10,7 @@ export const dbProvider = {
     host: envs().database.uri,
     database: envs().database.dbName,
     password: envs().database.password,
-    port: envs().database.port,
+    port: +envs().database.port,
   }),
 };
 

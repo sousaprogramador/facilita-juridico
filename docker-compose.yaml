@@ -3,36 +3,51 @@ services:
     build:
       context: ./db
     container_name: db-container
+    restart: always
+    networks:
+      - network-db
     ports:
-      - '5432:5432'
+      - "5432:5432"
     environment:
       POSTGRES_DB: roteirizador
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: roteirizador123
 
-  # nodeapp:
-  #   build:
-  #     context: ./back-end
-  #   command: npm run dev
-  #   ports:
-  #     - "9000:9000"
-  #   depends_on:
-  #     - postgres
-  #   environment:
-  #     DB_URI: http://localhost:5432
-  #     SPACEAPI: https://api.spacexdata.com/v5
-  #   volumes:
-  #     - ./back-end:/src/
+  nodeapp:
+    build:
+      context: ./back-end
+    command: npm run dev
+    ports:
+      - "9000:9000"
+    depends_on:
+      - postgres
+    restart: always
+    networks:
+      - network-db
+    environment:
+      DATABASE_URL: postgres
+      POSTGRES_DB: roteirizador
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: roteirizador123
+      PORT_DB: 5432
+      SECRET_KEY: 897da89sdnas9d81e1E!@41
+      PORT: 9000
+    volumes:
+      - ./back-end:/src/
 
-  # frontapp:
-  #   build:
-  #     context: ./front-end
-  #   command: npm run dev
-  #   ports:
-  #     - "3000:3000"
-  #   depends_on:
-  #     - nodeapp
-  #   environment:
-  #     VITE_API_URL: http://localhost:9000
-  #   volumes:
-  #     - ./front-end:/src/
+  frontapp:
+    build:
+      context: ./front-end
+    command: npm run dev
+    ports:
+      - "3000:3000"
+    depends_on:
+      - nodeapp
+    environment:
+      VITE_API_URL: http://localhost:9000
+    volumes:
+      - ./front-end:/src/
+
+networks:
+  network-db:
+    driver: bridge

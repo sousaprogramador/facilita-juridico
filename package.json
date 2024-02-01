@@ -2,6 +2,7 @@
   "dependencies": {
     "@nestjs/common": "^10.3.0",
     "@nestjs/jwt": "^10.2.0",
+    "@types/react-leaflet": "^3.0.0",
     "jsonwebtoken": "^9.0.2",
     "reflect-metadata": "^0.2.1"
   }

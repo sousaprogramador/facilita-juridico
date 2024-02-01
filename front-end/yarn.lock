@@ -2509,7 +2509,7 @@
 
 "@nextui-org/react@^2.2.9":
   version "2.2.9"
-  resolved "https://registry.npmjs.org/@nextui-org/react/-/react-2.2.9.tgz"
+  resolved "https://registry.yarnpkg.com/@nextui-org/react/-/react-2.2.9.tgz#aa4e872492a710fdffffd431679e6cbd857d3653"
   integrity sha512-QHkUQTxI9sYoVjrvTpYm5K68pMDRqD13+DVzdsrkJuETGhbvE2c2CCGc4on9EwXC3JsOxuP/OyqaAmOIuHhYkA==
   dependencies:
     "@nextui-org/accordion" "2.0.28"
