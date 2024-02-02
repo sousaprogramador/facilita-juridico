@@ -1,0 +1,256 @@
+{
+	"info": {
+		"_postman_id": "ce91576a-e121-4c1c-9f8d-6c257a8299b8",
+		"name": "roteirizador",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10348270",
+		"_collection_link": "https://dark-zodiac-890653.postman.co/workspace/Bruno~23274a8d-4ba4-469f-93d2-b3dadfe09dd0/collection/10348270-ce91576a-e121-4c1c-9f8d-6c257a8299b8?action=share&source=collection_link&creator=10348270"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/user",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "auth",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"mateus@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/user/auth",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"user",
+								"auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Mateus\",\r\n    \"email\": \"mateus@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/user",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "client",
+			"item": [
+				{
+					"name": "list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/clients",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"clients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "static",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/clients/static",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"clients",
+								"static"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Felipe\",\r\n    \"email\": \"felipe@gmail.com\",\r\n    \"phone\": \"88 9 97875050\",\r\n    \"cep\": \"60714720\",\r\n    \"address\": \"Raquel de Queiroz\",\r\n    \"state\": \"Ceará\",\r\n    \"city\": \"Fortaleza\",\r\n    \"complement\": \"A, apt\",\r\n    \"longitude\": \"-43.1729\",\r\n    \"latitude\": \"-22.9068\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/clients/b53d3c04-713b-4b50-b14e-d19a78fbac26",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"clients",
+								"b53d3c04-713b-4b50-b14e-d19a78fbac26"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{Token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Felipe\",\r\n    \"email\": \"felipe@gmail.com\",\r\n    \"phone\": \"88 9 97875050\",\r\n    \"cep\": \"60714720\",\r\n    \"address\": \"Raquel de Queiroz\",\r\n    \"state\": \"Ceará\",\r\n    \"city\": \"Fortaleza\",\r\n    \"complement\": \"A, apt\",\r\n    \"longitude\": \"-43.1729\",\r\n    \"latitude\": \"-22.9068\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/clients/5d4668fb-c582-4c3d-a5b6-35a3b2b5d6ee",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"clients",
+								"5d4668fb-c582-4c3d-a5b6-35a3b2b5d6ee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Flavio\",\r\n    \"email\": \"falvio@gmail.com\",\r\n    \"phone\": \"88 9 97875050\",\r\n    \"cep\": \"60714720\",\r\n    \"address\": \"Raquel de Queiroz\",\r\n    \"state\": \"Ceará\",\r\n    \"city\": \"Fortaleza\",\r\n    \"complement\": \"A, apt\",\r\n    \"longitude\": \"-43.1729\",\r\n    \"latitude\": \"-22.9068\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/clients",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"clients"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
